@@ -3,107 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Clara Ferreira - Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <!-- Ícones (Font Awesome ou outro) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="cabecalho_container">
-        <h3>Clara Ferreira</h3>
-        <ul class="list_container">
-        <li>
-            <img src="imgs/home.png" alt="Ícone Home">
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <img src="imgs/profile.png" alt="Ícone de Perfil">
-            <a href="#">About</a>
-        </li>
-        <li>
-            <img src="imgs/projects.png" alt="Ícone de lista">
-            <a href="#">Projects</a>
-        </li>
-        <li>
-            <img src="imgs/phone.png" alt="Ícone de Telefone">
-            <a href="#">Contact</a>
-        </li>
-        <li>
-            <img src="imgs/language.png" alt="Ícone de Linguagem">
-            <a href="#">Language</a>
-        </li>
-    </ul>
+        <h1>Clara Ferreira</h1>
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="list_container nav-menu">
+                <li>
+                    <img src="imgs/home.png" alt="Ícone Home" aria-hidden="true">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <img src="imgs/profile.png" alt="Ícone de Perfil" aria-hidden="true">
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <img src="imgs/projects.png" alt="Ícone de Projetos" aria-hidden="true">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <img src="imgs/phone.png" alt="Ícone de Contato" aria-hidden="true">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li>
+                    <img src="imgs/language.png" alt="Ícone de Idioma" aria-hidden="true">
+                    <a href="#language">Language</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <main >
-        <section class="seccao1_container">
-            <h1>Hi! I am a Software learner.</h1>
-            <h1>I transform ideas into digital reality through code.</h1>
-            <button>Read More</button>
+    <main>
+        <section class="seccao1_container" aria-labelledby="main-heading">
+            <h2 id="main-heading">Hi! I am a Software learner.</h2>
+            <p>I transform ideas into digital reality through code.</p>
+            <button aria-label="Read more about Clara">Read More</button>
         </section>
 
-        <section class="seccao2_container">
-            <div class="education_container">
-                <h2>Education</h2>
-                <p >Federal Rural University of Pernambuco (UFRPE)</p>
-            </div>
-            <div class="softSkill_container">
-                <h2>Soft skill</h2>
-                <ul>
-                    <li>
-                        <p>Problem-Solving</p>
-                    </li>
-                    <li>
-                        <p>Communication</p>
-                    </li>
-                    <li>
-                        <p>Team Collaboration</p>
-                    </li>
-                    <li>
-                        <p>Adaptability</p>
-                    </li>
-                    <li>
-                        <p>Curiosity and Initiative</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="technicalSkill_container">
-                <h2>Technical skill</h2>
-                <div class="imagens_container">
-                    <img src="imgs/figma.png" alt="Logo figma">
-                    <img src="imgs/java.png" alt="Logo java">
-                    <img src="imgs/react.png" alt="Logo react">
-                    <img src="imgs/kotlin.png" alt="Logo kotlin">
-                    <img src="imgs/python.png" alt="Logo python">
-                    <img src="imgs/javaScript.png" alt="Logo javaScript">
+        <section class="seccao2_container" aria-label="Informações sobre Clara Ferreira">
+            <article class="education_container">
+                <h3>Education</h3>
+                <p>Federal Rural University of Pernambuco (UFRPE)</p>
+            </article>
 
-                </div>
-            </div>
-            <div class="skillSet_container">
-                <h2>Skill set</h2>
+            <article class="softSkill_container">
+                <h3>Soft skill</h3>
                 <ul>
-                    <li>
-                        <p>Web Design</p>
-                    </li>
-                    <li>
-                        <p>App Design</p>
-                    </li>
-                    <li>
-                        <p>Prototyping</p>
-                    </li>
+                    <li>Problem-Solving</li>
+                    <li>Communication</li>
+                    <li>Team Collaboration</li>
+                    <li>Adaptability</li>
+                    <li>Curiosity and Initiative</li>
                 </ul>
-            </div>
-            <div class="interest_container">
-                <h2>Interest</h2>
-                <p>UI/UX   |    Full Stack Web Development</p>
-            </div>
-            <div class="language">
-                <h2>Language</h2>
+            </article>
+
+            <article class="technicalSkill_container">
+                <h3>Technical skill</h3>
+                <div class="imagens_container" role="list" aria-label="Habilidades técnicas">
+                    <img src="imgs/figma.png" alt="Figma" role="listitem">
+                    <img src="imgs/java.png" alt="Java" role="listitem">
+                    <img src="imgs/react.png" alt="React" role="listitem">
+                    <img src="imgs/kotlin.png" alt="Kotlin" role="listitem">
+                    <img src="imgs/python.png" alt="Python" role="listitem">
+                    <img src="imgs/javaScript.png" alt="JavaScript" role="listitem">
+                </div>
+            </article>
+
+            <article class="skillSet_container">
+                <h3>Skill set</h3>
+                <ul>
+                    <li>Web Design</li>
+                    <li>App Design</li>
+                    <li>Prototyping</li>
+                </ul>
+            </article>
+
+            <article class="interest_container">
+                <h3>Interest</h3>
+                <p>UI/UX | Full Stack Web Development</p>
+            </article>
+
+            <article class="language">
+                <h3>Language</h3>
                 <p>Portuguese | English</p>
-            </div>
+            </article>
         </section>
     </main>
 
+    <footer role="contentinfo">
+        <!-- Você pode adicionar um rodapé posteriormente -->
+    </footer>
 </body>
-</html> 
+</html>
