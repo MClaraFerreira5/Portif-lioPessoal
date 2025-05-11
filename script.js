@@ -1,23 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+const themeSwitch = document.querySelector('.switch input');
+const images = document.querySelectorAll('.toggle-image');
 
-        const icon = this.querySelector('i');
-        if (navMenu.classList.contains('active')) {
-            icon.classList.replace('fa-bars', 'fa-times');
-        } else {
-            icon.classList.replace('fa-times', 'fa-bars');
-        }
-    });
+themeSwitch.addEventListener('change', function() {
+  images.forEach(img => {
+    if (this.checked) {
+      img.setAttribute('src', img.getAttribute('data-dark-src'));
+    } else {
+      img.setAttribute('src', img.getAttribute('src').replace('-dark', '-light')); // Ou volte ao original
+    }
+  });
+});
 
-
-    document.querySelectorAll('.nav-menu a').forEach(item => {
-        item.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
-        });
-    });
+document.querySelector('.switch input').addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+    console.log('Switch ligado');
+  } else {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+    console.log('Switch desligado');
+  }
 });

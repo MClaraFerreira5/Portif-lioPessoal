@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clara Ferreira - Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/styleEscuro.css">
+
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,11 +18,7 @@
         </button>
 
         <nav>
-            <ul class="list_container nav-menu">
-                <li>
-                    <img src="imgs/home.png" alt="Ícone Home" aria-hidden="true">
-                    <a href="#">Home</a>
-                </li>
+            <ul class="list_container">
                 <li>
                     <img src="imgs/profile.png" alt="Ícone de Perfil" aria-hidden="true">
                     <a href="#about">About</a>
@@ -36,6 +34,12 @@
                 <li>
                     <img src="imgs/language.png" alt="Ícone de Idioma" aria-hidden="true">
                     <a href="#language">Language</a>
+                </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 </li>
             </ul>
         </nav>
@@ -68,12 +72,12 @@
             <article class="technicalSkill_container">
                 <h3>Technical skill</h3>
                 <div class="imagens_container" role="list" aria-label="Habilidades técnicas">
-                    <img src="imgs/figma.png" alt="Figma" role="listitem">
-                    <img src="imgs/java.png" alt="Java" role="listitem">
-                    <img src="imgs/react.png" alt="React" role="listitem">
-                    <img src="imgs/kotlin.png" alt="Kotlin" role="listitem">
-                    <img src="imgs/python.png" alt="Python" role="listitem">
-                    <img src="imgs/javaScript.png" alt="JavaScript" role="listitem">
+                    <img src="imgs/figma.png" data-dark-src="imgs/figmaDark.png" alt="Figma" role="listitem" class="toggle-image">
+                    <img src="imgs/java.png" data-dark-src="imgs/javaDark.png" alt="Java" role="listitem" class="toggle-image">
+                    <img src="imgs/react.png" data-dark-src="imgs/reactDark.png" alt="React" role="listitem" class="toggle-image">
+                    <img src="imgs/kotlin.png" data-dark-src="imgs/kotlinDark.png" alt="Kotlin" role="listitem" class="toggle-image">
+                    <img src="imgs/python.png" data-dark-src="imgs/pythonDark.png" alt="Python" role="listitem" class="toggle-image">
+                    <img src="imgs/javaScript.png" data-dark-src="imgs/javaScriptDark.png" alt="JavaScript" role="listitem" class="toggle-image">
                 </div>
             </article>
 
@@ -99,7 +103,7 @@
     </main>
 
     <footer role="contentinfo">
-        <!-- Você pode adicionar um rodapé posteriormente -->
+         <p>Desenvolvido por Clara Ferreira - 10/05/25</p>
     </footer>
 </body>
 </html>
